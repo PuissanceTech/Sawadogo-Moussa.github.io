@@ -1,9 +1,4 @@
-/* ============================================================
-   PORTFOLIO — MOUSSA SAWADOGO
-   script.js
-   ============================================================ */
-
-/* ---------- CUSTOM CURSOR ---------- */
+/* Curseur personnalisé */
 const cursor = document.getElementById('cursor');
 const ring   = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
@@ -24,7 +19,6 @@ function animateCursor() {
 }
 animateCursor();
 
-/* Agrandir le curseur au survol des éléments interactifs */
 document.querySelectorAll('a, button, .skill-card, .project-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.style.width  = '20px';
@@ -40,7 +34,7 @@ document.querySelectorAll('a, button, .skill-card, .project-card').forEach(el =>
   });
 });
 
-/* ---------- SCROLL — ANIMATIONS FADE-IN ---------- */
+/* Animations fade-in au scroll */
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -50,10 +44,9 @@ const fadeObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-/* ---------- SMOOTH SCROLL ---------- */
+/* Scroll fluide */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -64,7 +57,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ---------- BARRES DE PROGRESSION (section cybersécurité) ---------- */
+/* Barres de progression (section cybersécurité) */
 const progObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -74,6 +67,5 @@ const progObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.3 });
-
 const cybersecSection = document.getElementById('cybersec');
 if (cybersecSection) progObserver.observe(cybersecSection);

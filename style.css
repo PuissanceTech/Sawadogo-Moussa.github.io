@@ -1,9 +1,4 @@
-/* ============================================================
-   PORTFOLIO — MOUSSA SAWADOGO
-   style.css
-   ============================================================ */
-
-/* ---------- VARIABLES ---------- */
+/* Variables */
 :root {
   --bg: #0a0a0f;
   --bg2: #111118;
@@ -18,7 +13,7 @@
   --glow: 0 0 40px rgba(0,255,136,0.15);
 }
 
-/* ---------- RESET ---------- */
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -36,12 +31,11 @@ body {
   cursor: none;
 }
 
-/* ---------- SCROLLBAR ---------- */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-/* ---------- GRID BACKGROUND ---------- */
+/* Fond quadrillé */
 body::before {
   content: '';
   position: fixed;
@@ -54,7 +48,7 @@ body::before {
   z-index: 0;
 }
 
-/* ---------- CUSTOM CURSOR ---------- */
+/* Curseur personnalisé */
 .cursor {
   position: fixed;
   width: 12px;
@@ -82,7 +76,7 @@ body::before {
 
 body:hover .cursor { opacity: 1; }
 
-/* ---------- NAVIGATION ---------- */
+/* Navigation */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -151,7 +145,7 @@ nav {
   color: var(--bg);
 }
 
-/* ---------- HERO ---------- */
+/* Hero */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -255,7 +249,7 @@ nav {
   flex-wrap: wrap;
 }
 
-/* ---------- BUTTONS ---------- */
+/* Boutons */
 .btn-primary {
   background: var(--accent);
   color: var(--bg);
@@ -299,7 +293,7 @@ nav {
   transform: translateY(-2px);
 }
 
-/* ---------- SCROLL INDICATOR ---------- */
+/* Indicateur de scroll */
 .scroll-hint {
   position: absolute;
   bottom: 2.5rem; left: 4rem;
@@ -334,7 +328,7 @@ nav {
   100% { left: 100%; }
 }
 
-/* ---------- SECTIONS (commun) ---------- */
+/* Sections communes */
 section {
   padding: 6rem 4rem;
   position: relative;
@@ -369,7 +363,7 @@ section {
   letter-spacing: -0.02em;
 }
 
-/* ---------- ABOUT ---------- */
+/* À propos */
 #about { background: var(--bg2); }
 
 .about-grid {
@@ -431,7 +425,7 @@ section {
   text-transform: uppercase;
 }
 
-/* ---------- SKILLS ---------- */
+/* Compétences */
 #skills { background: var(--bg); }
 
 .skills-grid {
@@ -502,7 +496,7 @@ section {
   color: var(--accent);
 }
 
-/* ---------- CYBERSÉCURITÉ ---------- */
+/* Cybersécurité */
 #cybersec {
   background: var(--bg2);
   border-top: 1px solid var(--border);
@@ -646,7 +640,7 @@ section {
   to { transform: scaleX(1); }
 }
 
-/* ---------- PROJECTS ---------- */
+/* Projets */
 #projects { background: var(--bg); }
 
 .projects-grid {
@@ -726,7 +720,7 @@ section {
   letter-spacing: 0.08em;
 }
 
-/* ---------- CONTACT ---------- */
+/* Contact */
 #contact {
   background: var(--bg2);
   text-align: center;
@@ -790,7 +784,7 @@ section {
   transform: translateY(-3px);
 }
 
-/* ---------- FOOTER ---------- */
+/* Footer */
 footer {
   padding: 2rem 4rem;
   border-top: 1px solid var(--border);
@@ -805,7 +799,7 @@ footer {
 footer p   { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.1em; }
 footer span { color: var(--accent); }
 
-/* ---------- ANIMATIONS ---------- */
+/* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -817,7 +811,7 @@ footer span { color: var(--accent); }
   transform: none;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* Responsive */
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
